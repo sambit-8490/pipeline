@@ -1,0 +1,16 @@
+services:
+  jenkin:
+    image: "jenkins/jenkins"
+    ports:
+       -  1000:8080
+    volumes:
+      # - my-volume:/var/jenkins_home
+        - /home/ubuntu/myvolume:/var/jenkins_home
+    networks:
+       - demo
+
+
+#volumes:
+  # my-volume:
+networks:
+    demo:

@@ -1,14 +1,13 @@
-FROM ubuntu
+FROM openjdk
 
 #set working directory
-WORKDIR /sam
+WORKDIR /sambit
 
-#copy application file
-COPY . /sam
+#copy application file 
+COPY . /sambit
 
-RUN apt-get update && apt install python3 -y
 
-#expose port
-EXPOSE 8080
+#CMD ["java", "App.java", "Demo.java", "Sample.java"]
+#CMD ["./run.sh]
+ENTRYPOINT ["./run.sh"]
 
-CMD ["python3", "--version"]
